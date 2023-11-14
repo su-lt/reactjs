@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Changa+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-barlow text-primary;
+    }
+
+    h1 {
+        @apply text-3xl font-changaOne;
+    }
+    h4 {
+        @apply text-2xl;
+    }
+}
