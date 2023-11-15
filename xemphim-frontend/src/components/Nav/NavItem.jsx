@@ -4,7 +4,7 @@ const NavItem = ({ item }) => {
     return (
         <div>
             <li
-                className={`p-2 flex justify-end items-center gap-2 cursor-pointer ${
+                className={`py-2 px-4 flex justify-end items-center gap-2 cursor-pointer ${
                     active ? `bg-primary text-white` : ``
                 }`}
             >

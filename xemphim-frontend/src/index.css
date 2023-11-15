@@ -16,3 +16,17 @@
         @apply text-2xl;
     }
 }
+
+@layer components {
+    .button {
+        @apply border-2 border-primary px-4 py-2 text-xl font-semibold rounded uppercase cursor-pointer
+            hover:bg-primary hover:text-white;
+    }
+    .card {
+        @apply relative bg-primary rounded-md shadow-md shadow-primary overflow-hidden 
+            hover:shadow-lg hover:shadow-primary;
+    }
+    .card-badge {
+        @apply absolute flex justify-center items-center gap-2 bg-cyan-50 rounded-md top-2 left-2 p-2 min-w-[25%];
+    }
+}

@@ -1,5 +1,6 @@
-import { BiHomeAlt, BiMoviePlay, BiInfoCircle } from "react-icons/bi";
+import { BiHomeAlt, BiMoviePlay, BiInfoCircle, BiMenu } from "react-icons/bi";
 import NavItem from "./NavItem";
+import { useState } from "react";
 
 const defaultIconSize = "1.5rem";
 const items = [
@@ -17,16 +18,25 @@ const NavItemsContainer = () => (
 );
 
 const Nav = () => {
+    const [open, setOpen] = useState(false);
+
     return (
-        <div className="col-span-1 bg-cyan-200">
-            <div className="mx-4 text-right">
+        <div className="min-w-[220px] col-span-1 bg-cyan-200">
+            <div className="mx-4 text-right flex justify-between items-center sm:block">
                 <h1 className="uppercase text-primary my-4 border-b border-primary">
                     xemphim.abc
                 </h1>
-                <ul className="mx4 text-right">
-                    <NavItemsContainer />
-                </ul>
+                <div>
+                    <BiMenu
+                        className="cursor-pointer sm:hidden"
+                        size={defaultIconSize}
+                        onClick={() => setOpen(!open)}
+                    />
+                </div>
             </div>
+            <ul className={`mx4 text-right ${open ? "" : "hidden"} sm:block`}>
+                <NavItemsContainer />
+            </ul>
         </div>
     );
 };

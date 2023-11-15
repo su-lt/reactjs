@@ -1,11 +1,13 @@
 import Main from "./Pages/Main";
 import Nav from "./components/Nav";
+import AuthButtons from "./components/AuthButtons";
 
 function App() {
     return (
-        <div className="grid grid-cols-5">
+        <div className="grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             <Nav />
-            <div className="px-12 py-6 col-span-4 bg-cyan-50">
+            <div className="px-12 py-6 sm:col-span-2 lg:col-span-3 xl:col-span-5 bg-cyan-50">
+                <AuthButtons />
                 <Main />
             </div>
         </div>
