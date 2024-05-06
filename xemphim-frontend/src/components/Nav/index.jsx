@@ -21,7 +21,7 @@ const Nav = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="min-w-[220px] col-span-1 bg-cyan-200">
+        <div className="min-w-[220px] col-span-1 bg-[#0f1111]">
             <div className="mx-4 text-right flex justify-between items-center sm:block">
                 <h1 className="uppercase text-primary my-4 border-b border-primary">
                     xemphim.abc
